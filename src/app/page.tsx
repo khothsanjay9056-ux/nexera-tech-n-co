@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, BarChart3, ShoppingCart, Zap, CheckCircle } from 'lucide-react'
-import { HeroVideo } from '@/components/HeroVideo'
+import { HeroRotator } from '@/components/HeroRotator'
 import { BeforeAfter } from '@/components/BeforeAfter'
 import { ServiceCard } from '@/components/ServiceCard'
 
@@ -18,88 +18,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* Hero Section with Video Background */}
-      <section className="relative h-screen w-full overflow-hidden">
-        <HeroVideo />
-        <div className="hero-video-overlay" />
-        
-        <div className="relative z-20 flex h-full items-center">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Left side - Main content */}
-              <div className="animate-fade-in-up bg-black/30 backdrop-blur-sm p-8 rounded-2xl">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                  Stop Guessing. <br />
-                  <span className="text-blue-300">Start Growing.</span>
-                </h1>
-                <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-md">
-                  Nexera turns your business complexity into clarity. Your global partner for Data, Web, and Automation, based right here in the GTA.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="text-lg px-8 py-6">
-                    <Link href="/contact">
-                      Book Your Free 15-Min Consultation
-                    </Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 bg-white/10 text-white border-white hover:bg-white hover:text-black">
-                    <Link href="/services">
-                      Explore Services
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Right side - Service highlights */}
-              <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-blue-500/20 p-3 rounded-lg">
-                      <BarChart3 className="h-8 w-8 text-blue-300" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-1">Custom Power BI Dashboards</h3>
-                      <div className="flex items-center text-blue-300 text-sm">
-                        <span>Learn more</span>
-                        <ArrowRight className="h-4 w-4 ml-1" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-purple-500/20 p-3 rounded-lg">
-                      <ShoppingCart className="h-8 w-8 text-purple-300" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-1">High-Performance Shopify Stores</h3>
-                      <div className="flex items-center text-purple-300 text-sm">
-                        <span>Learn more</span>
-                        <ArrowRight className="h-4 w-4 ml-1" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-indigo-500/20 p-3 rounded-lg">
-                      <Zap className="h-8 w-8 text-indigo-300" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-1">Automated Business Workflows</h3>
-                      <div className="flex items-center text-indigo-300 text-sm">
-                        <span>Learn more</span>
-                        <ArrowRight className="h-4 w-4 ml-1" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section with Interactive Demos */}
+      <HeroRotator />
 
       {/* Trust Indicators */}
       <section className="py-12 bg-gray-50">
