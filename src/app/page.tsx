@@ -46,15 +46,14 @@ export default function Home() {
       </section>
 
       {/* Before & After Interactive Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
               From Chaos to Clarity
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how we transform messy spreadsheets and manual processes into 
-              beautiful, automated systems that save you hours every week.
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
+              See how we transform messy spreadsheets into beautiful, automated dashboards
             </p>
           </div>
           
