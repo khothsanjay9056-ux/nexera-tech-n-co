@@ -105,21 +105,22 @@ function ShopifyDemo() {
   const [cartCount, setCartCount] = useState(0)
 
   return (
-    <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
-      <h3 className="text-2xl font-bold mb-6 text-gray-800">High-Converting Store Preview</h3>
-      <div className="space-y-4">
-        <div className="flex gap-4 p-4 bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl border-2 border-pink-200">
-          <div className="w-24 h-24 bg-gradient-to-br from-pink-400 to-purple-500 rounded-lg flex items-center justify-center">
-            <ShoppingCart className="h-12 w-12 text-white" />
+    <div className="bg-white/95 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-8 shadow-2xl">
+      <h3 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-gray-800">High-Converting Store Preview</h3>
+      <div className="space-y-3 md:space-y-4">
+        <div className="flex gap-3 md:gap-4 p-3 md:p-4 bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl border-2 border-pink-200">
+          <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-pink-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+            <ShoppingCart className="h-8 w-8 md:h-12 md:w-12 text-white" />
           </div>
-          <div className="flex-1">
-            <h4 className="font-bold text-lg mb-1">Premium Product</h4>
-            <p className="text-sm text-gray-600 mb-2">Perfect for small businesses</p>
-            <div className="flex items-center justify-between">
-              <span className="text-2xl font-bold text-green-600">$99.99</span>
+          <div className="flex-1 min-w-0">
+            <h4 className="font-bold text-base md:text-lg mb-1">Premium Product</h4>
+            <p className="text-xs md:text-sm text-gray-600 mb-2">Perfect for small businesses</p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+              <span className="text-xl md:text-2xl font-bold text-green-600">$99.99</span>
               <Button 
                 onClick={() => setCartCount(cartCount + 1)}
-                className="bg-gradient-to-r from-pink-500 to-purple-600"
+                className="bg-gradient-to-r from-pink-500 to-purple-600 w-full sm:w-auto text-sm md:text-base"
+                size="sm"
               >
                 Add to Cart
               </Button>
@@ -127,14 +128,14 @@ function ShopifyDemo() {
           </div>
         </div>
         {cartCount > 0 && (
-          <div className="p-4 bg-green-50 border-2 border-green-200 rounded-xl animate-fade-in-up">
-            <p className="text-green-900 font-semibold">
+          <div className="p-3 md:p-4 bg-green-50 border-2 border-green-200 rounded-xl animate-fade-in-up">
+            <p className="text-green-900 font-semibold text-sm md:text-base">
               ✅ {cartCount} item{cartCount > 1 ? 's' : ''} in cart - This is how easy checkout should be!
             </p>
           </div>
         )}
-        <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
-          <p className="text-sm text-blue-900">
+        <div className="p-3 md:p-4 bg-blue-50 rounded-lg border border-blue-200">
+          <p className="text-xs md:text-sm text-blue-900">
             <strong>⚡ Fast, Beautiful, Converting:</strong> Your Shopify store built for sales, not just looks.
           </p>
         </div>
@@ -164,22 +165,22 @@ function AutomationDemo() {
   }
 
   return (
-    <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
-      <h3 className="text-2xl font-bold mb-6 text-gray-800">Automation in Action</h3>
-      <div className="space-y-3 mb-6">
+    <div className="bg-white/95 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-8 shadow-2xl">
+      <h3 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-gray-800">Automation in Action</h3>
+      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
         {tasks.map(task => (
           <div 
             key={task.id} 
-            className={`p-4 rounded-xl border-2 transition-all ${
+            className={`p-3 md:p-4 rounded-xl border-2 transition-all ${
               task.status === 'completed' 
                 ? 'bg-green-50 border-green-300' 
                 : 'bg-gray-50 border-gray-200'
             }`}
           >
-            <div className="flex items-center justify-between">
-              <span className="font-medium">{task.name}</span>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <span className="font-medium text-sm md:text-base">{task.name}</span>
               <div className="flex items-center gap-3">
-                <span className={`text-sm ${task.status === 'completed' ? 'text-green-600 line-through' : 'text-gray-500'}`}>
+                <span className={`text-xs md:text-sm ${task.status === 'completed' ? 'text-green-600 line-through' : 'text-gray-500'}`}>
                   {task.status === 'pending' ? task.time : '✅ 3 seconds'}
                 </span>
               </div>
@@ -190,12 +191,12 @@ function AutomationDemo() {
       <Button 
         onClick={runAutomation} 
         disabled={isAutomating}
-        className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-lg py-6"
+        className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-base md:text-lg py-5 md:py-6"
       >
         {isAutomating ? '⚡ Automating...' : '▶ Watch Automation Save 3+ Hours'}
       </Button>
-      <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
-        <p className="text-sm text-blue-900">
+      <div className="mt-3 md:mt-4 p-3 md:p-4 bg-blue-50 rounded-lg border border-blue-200">
+        <p className="text-xs md:text-sm text-blue-900">
           <strong>💡 Time Saved:</strong> What takes hours manually, happens in seconds with automation.
         </p>
       </div>
@@ -222,30 +223,30 @@ function SEODemo() {
   }
 
   return (
-    <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
-      <h3 className="text-2xl font-bold mb-6 text-gray-800">SEO Impact Visualizer</h3>
-      <div className="space-y-6">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl">
-            <p className="text-sm text-orange-700 mb-2">Google Ranking</p>
-            <p className="text-4xl font-bold text-orange-900">#{ranking}</p>
+    <div className="bg-white/95 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-8 shadow-2xl">
+      <h3 className="text-lg md:text-2xl font-bold mb-4 md:mb-6 text-gray-800">SEO Impact Visualizer</h3>
+      <div className="space-y-4 md:space-y-6">
+        <div className="grid grid-cols-2 gap-3 md:gap-4">
+          <div className="p-4 md:p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl">
+            <p className="text-xs md:text-sm text-orange-700 mb-2">Google Ranking</p>
+            <p className="text-3xl md:text-4xl font-bold text-orange-900">#{ranking}</p>
             {ranking <= 10 && <p className="text-xs text-green-600 mt-1">🎉 First Page!</p>}
           </div>
-          <div className="p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl">
-            <p className="text-sm text-green-700 mb-2">Monthly Visitors</p>
-            <p className="text-4xl font-bold text-green-900">{traffic.toLocaleString()}</p>
+          <div className="p-4 md:p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl">
+            <p className="text-xs md:text-sm text-green-700 mb-2">Monthly Visitors</p>
+            <p className="text-3xl md:text-4xl font-bold text-green-900">{traffic.toLocaleString()}</p>
             <p className="text-xs text-green-600 mt-1">+{Math.round((traffic/120 - 1) * 100)}% growth</p>
           </div>
         </div>
         <Button 
           onClick={optimize}
           disabled={isOptimizing}
-          className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-lg py-6"
+          className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-base md:text-lg py-5 md:py-6"
         >
           {isOptimizing ? '🚀 Optimizing...' : '▶ Watch SEO Boost Your Traffic'}
         </Button>
-        <div className="p-4 bg-green-50 rounded-lg border border-green-200">
-          <p className="text-sm text-green-900">
+        <div className="p-3 md:p-4 bg-green-50 rounded-lg border border-green-200">
+          <p className="text-xs md:text-sm text-green-900">
             <strong>📈 The Result:</strong> Higher rankings = More customers finding YOU instead of your competitors.
           </p>
         </div>
