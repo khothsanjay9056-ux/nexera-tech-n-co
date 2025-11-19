@@ -5,39 +5,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const currentDate = new Date().toISOString()
 
-  // Core pages
-  const routes = [
-    '',
-    '/about',
-    '/services',
-    '/projects',
-    '/contact',
-    '/blog',
+  // Homepage - highest priority
+  const homepage = {
+    url: `${baseUrl}`,
+    lastModified: currentDate,
+    changeFrequency: 'daily' as const,
+    priority: 1.0,
+  }
+
+  // Main pages - high priority
+  const mainPages = [
+    { route: '/services', priority: 0.95 },
+    { route: '/contact', priority: 0.9 },
+    { route: '/about', priority: 0.85 },
+    { route: '/projects', priority: 0.85 },
+    { route: '/blog', priority: 0.8 },
+  ].map(({ route, priority }) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority,
+  }))
+
+  // Service pages - very high priority for local SEO
+  const servicePages = [
+    '/services/power-bi-dashboards',
+    '/services/excel-automation',
+    '/services/web-ecommerce',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: currentDate,
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1 : 0.8,
+    priority: 0.92,
   }))
 
-  // Service pages
-  const servicePages = [
-    '/services/power-bi-dashboards',
-    '/services/excel-automation',
-    '/services/data-reporting',
-    '/services/shopify-development',
-    '/services/website-development',
-    '/services/website-optimization',
-    '/services/workflow-automation',
-    '/services/inventory-management',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.9,
-  }))
-
-  // Blog posts
+  // Blog posts - good priority for content SEO
   const blogPosts = [
     '/blog/excel-automation-small-business',
     '/blog/shopify-ultimate-launchpad',
@@ -48,8 +50,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${route}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.75,
   }))
 
-  return [...routes, ...servicePages, ...blogPosts]
+  return [homepage, ...mainPages, ...servicePages, ...blogPosts]
 }

@@ -1,14 +1,37 @@
+# Nexera Technology and Consultancy - Robots.txt
+# Allow all search engines to crawl and index our site
+
+# Google
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
-User-agent: Bingbot
+# Google Images
+User-agent: Googlebot-Image
 Allow: /
 
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Twitter
 User-agent: Twitterbot
 Allow: /
 
+# Facebook
 User-agent: facebookexternalhit
 Allow: /
 
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# All other bots
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/static/
+
+# Sitemap
+Sitemap: https://nexeratech.com/sitemap.xml

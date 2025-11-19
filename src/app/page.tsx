@@ -7,11 +7,27 @@ import { BeforeAfter } from '@/components/BeforeAfter'
 import { ServiceCard } from '@/components/ServiceCard'
 
 export const metadata: Metadata = {
-  title: 'Home | Small Business Growth Solutions in Mississauga & GTA',
-  description: 'We help small businesses get online, look professional, and stop losing customers to competitors. Expert Excel automation, Power BI dashboards, Shopify stores, and workflow automation services in Mississauga, GTA, Ontario, and across Canada.',
-  keywords: ['small business technology Mississauga', 'business automation GTA', 'get business online', 'Excel automation consultant', 'Power BI expert Ontario', 'Shopify developer Canada'],
+  title: 'Nexera Technology | Data Services Near Me, Web Development Services & Automation | Mississauga, GTA',
+  description: 'Nexera Technology and Consultancy (Nexera Tech & Co) - #1 data services near me, web development services near me, and business automation near me. Expert Excel automation, Power BI dashboards, Shopify stores, and workflow automation in Mississauga, Brampton, Toronto, GTA, Ontario. Free consultation - Call now!',
+  keywords: [
+    'Nexera', 'Nexera Technology', 'Nexera Tech', 'Nexera Tech and Co', 'Nexera Tech n Co',
+    'data services near me', 'web development services near me', 'business automation near me',
+    'data analytics near me', 'web developer near me', 'IT services near me',
+    'small business technology Mississauga', 'business automation GTA', 'get business online',
+    'Excel automation consultant', 'Excel services near me', 'spreadsheet automation',
+    'Power BI expert Ontario', 'Power BI consultant near me', 'dashboard services',
+    'Shopify developer Canada', 'Shopify expert near me', 'ecommerce development GTA',
+    'technology consultant Mississauga', 'IT consultant near me', 'digital services GTA',
+    'Mississauga data services', 'Brampton web development', 'Toronto automation services'
+  ],
   alternates: {
     canonical: '/',
+  },
+  openGraph: {
+    title: 'Nexera Technology | Data Services, Web Development & Automation Near Me',
+    description: 'Leading provider of data services, web development, and business automation in Mississauga, GTA.',
+    url: '/',
+    type: 'website',
   },
 }
 

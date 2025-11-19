@@ -5,10 +5,23 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { Database, Globe, Zap, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Services | Data Analytics, Web Development & Automation",
-  description: "Transform your business with our expert services: Power BI dashboards, Shopify stores, and workflow automation. Serving Mississauga & the GTA.",
+  title: "Services | Nexera Technology - Data Services Near Me, Web Development Services & Automation | Mississauga",
+  description: "Nexera Technology services: data services near me (Power BI, Excel automation, analytics), web development services near me (Shopify, custom websites), business automation near me (workflow optimization, process automation). Serving Mississauga, Brampton, Toronto, GTA, Ontario. Free consultation!",
+  keywords: [
+    'Nexera services', 'Nexera Technology services',
+    'data services near me', 'web development services near me', 'automation services near me',
+    'Power BI services Mississauga', 'Excel automation services GTA', 'dashboard development',
+    'Shopify development services', 'ecommerce services near me', 'website development GTA',
+    'business automation services', 'workflow automation Ontario', 'IT services Mississauga',
+    'data analytics services', 'web design services', 'technology services near me'
+  ],
   alternates: {
     canonical: "/services",
+  },
+  openGraph: {
+    title: 'Nexera Services | Data, Web Development & Automation',
+    description: 'Expert data services, web development services, and business automation near you in Mississauga & GTA.',
+    url: '/services',
   },
 };
 

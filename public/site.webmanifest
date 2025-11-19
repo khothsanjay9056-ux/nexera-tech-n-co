@@ -1,0 +1,16 @@
+{
+  "name": "Nexera Technology and Consultancy",
+  "short_name": "Nexera Tech",
+  "description": "Data services, web development services, and business automation near you in Mississauga, GTA.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

@@ -5,16 +5,25 @@ import { Card } from '@/components/ui/card'
 import { ArrowRight, BarChart3, TrendingUp, Clock, Target, CheckCircle, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Custom Power BI Dashboards for Small Businesses | Mississauga & GTA',
-  description: 'Transform your business data into visual insights with custom Power BI dashboards. Stop drowning in spreadsheets. Expert Power BI consultant serving Mississauga, GTA, Ontario, and Canada.',
-  keywords: ['Power BI consultant Mississauga', 'Power BI dashboard GTA', 'business intelligence Ontario', 'data visualization Canada', 'Power BI small business', 'custom dashboards Toronto'],
+  title: 'Power BI Services Near Me | Nexera Technology - Custom Dashboards Mississauga, GTA',
+  description: 'Nexera Technology: #1 Power BI services near me. Expert Power BI consultant in Mississauga, GTA. Custom Power BI dashboards, data visualization, business intelligence. Stop drowning in spreadsheets. Free consultation! Serving Mississauga, Brampton, Toronto, Ontario.',
+  keywords: [
+    'Nexera Power BI', 'Nexera data services',
+    'Power BI services near me', 'Power BI consultant near me', 'Power BI expert Mississauga',
+    'Power BI dashboard GTA', 'Power BI consultant Mississauga', 'business intelligence Ontario',
+    'data visualization Canada', 'Power BI small business', 'custom dashboards Toronto',
+    'Power BI developer near me', 'dashboard services Mississauga', 'data analytics near me',
+    'business dashboard services', 'Power BI reporting', 'data visualization services',
+    'BI consultant GTA', 'Power BI implementation', 'dashboard development Mississauga'
+  ],
   alternates: {
     canonical: '/services/power-bi-dashboards',
   },
   openGraph: {
-    title: 'Custom Power BI Dashboards | Nexera Technology',
-    description: 'Transform your business data into visual insights with custom Power BI dashboards.',
+    title: 'Power BI Services Near Me | Nexera Technology',
+    description: 'Expert Power BI consultant in Mississauga, GTA. Transform your data into visual insights with custom dashboards.',
     url: '/services/power-bi-dashboards',
+    type: 'website',
   },
 }
 

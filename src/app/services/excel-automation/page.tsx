@@ -5,13 +5,26 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, FileSpreadsheet, Clock, Zap, CheckCircle, AlertCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Excel Automation Services Mississauga | Fix Spreadsheets Fast",
-  description: "Excel automation expert in Mississauga. Stop wasting hours on manual data entry. We fix broken formulas, automate reports & save you 10+ hours weekly. Free audit!",
-  keywords: ["Excel automation Mississauga", "Excel consultant GTA", "spreadsheet automation", "Excel VBA macros", "business spreadsheet help"],
+  title: "Excel Automation Services Near Me | Nexera Technology - Excel Consultant Mississauga, GTA",
+  description: "Nexera Technology: #1 Excel automation services near me. Excel automation expert in Mississauga, GTA. Stop wasting hours on manual data entry. We fix broken formulas, automate reports & save you 10+ hours weekly. Free Excel audit! Serving Mississauga, Brampton, Toronto, Ontario.",
+  keywords: [
+    'Nexera Excel services', 'Nexera automation',
+    'Excel automation services near me', 'Excel consultant near me', 'Excel expert Mississauga',
+    'Excel automation Mississauga', 'Excel consultant GTA', 'spreadsheet automation services',
+    'Excel VBA macros', 'business spreadsheet help', 'Excel automation near me',
+    'Excel services GTA', 'spreadsheet consultant', 'Excel programming services',
+    'VBA developer near me', 'Excel automation consultant', 'spreadsheet optimization',
+    'Excel report automation', 'Excel macro development', 'spreadsheet services Mississauga'
+  ],
   alternates: {
     canonical: "/services/excel-automation",
   },
-};
+  openGraph: {
+    title: 'Excel Automation Services Near Me | Nexera Technology',
+    description: 'Excel automation expert in Mississauga. Fix spreadsheets, automate reports, save 10+ hours weekly.',
+    url: '/services/excel-automation',
+  },
+};;
 
 export default function ExcelAutomationPage() {
   return (

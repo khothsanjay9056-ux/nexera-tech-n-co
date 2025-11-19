@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, height=630">
+    <title>OG Image Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 1200px;
+            height: 630px;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            width: 180px;
+            height: auto;
+        }
+        .content {
+            text-align: center;
+            color: white;
+            z-index: 10;
+        }
+        h1 {
+            font-size: 72px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .tagline {
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .subtitle {
+            font-size: 32px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        .icons {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            display: flex;
+            gap: 30px;
+        }
+        .icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Nexera Technology Logo" class="logo" onerror="this.style.display='none'">
+        
+        <div class="content">
+            <h1>Nexera Technology</h1>
+            <div class="tagline">Stop Guessing. Start Growing.</div>
+            <div class="subtitle">Business Solutions | Mississauga & GTA</div>
+        </div>
+        
+        <div class="icons">
+            <div class="icon">📊</div>
+            <div class="icon">🛒</div>
+            <div class="icon">⚡</div>
+        </div>
+    </div>
+
+    <script>
+        // Instructions in console
+        console.log(`
+===========================================
+OG IMAGE TEMPLATE - INSTRUCTIONS
+===========================================
+
+To create your og-image.jpg:
+
+OPTION 1 - Screenshot (Quick):
+1. Open this file in browser (Chrome/Firefox)
+2. Press F12 to open DevTools
+3. Press Ctrl+Shift+P (Cmd+Shift+P on Mac)
+4. Type "screenshot" and select "Capture full size screenshot"
+5. Save as og-image.jpg in the public folder
+
+OPTION 2 - Online Tool:
+1. Copy the HTML from this file
+2. Go to https://htmlcsstoimage.com/
+3. Paste the HTML
+4. Download as og-image.jpg (1200x630)
+
+OPTION 3 - Use Canva:
+1. Go to canva.com
+2. Custom size: 1200 x 630
+3. Recreate this design
+4. Download as og-image.jpg
+
+===========================================
+        `);
+    </script>
+</body>
+</html>
